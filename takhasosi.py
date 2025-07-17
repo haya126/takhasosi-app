@@ -4,7 +4,8 @@ import streamlit as st
 from collections import OrderedDict
 
 st.set_page_config(page_title="منصه تخصصي", layout="centered")
-<style>
+st.markdown("""
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
 
         body {
@@ -46,6 +47,7 @@ st.set_page_config(page_title="منصه تخصصي", layout="centered")
         }
     </style>
 """, unsafe_allow_html=True)
+
 
 st.markdown("""
 <h1 style='text-align: right;'> ابحث عن التخصص المناسب لك في جامعة الكويت؟</h1>
