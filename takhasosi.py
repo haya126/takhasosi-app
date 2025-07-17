@@ -8,7 +8,7 @@ st.markdown("""
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
 
-        body {
+        body, .stApp {
             direction: rtl;
             text-align: right;
             background-color: #F9F7F1 !important;
@@ -20,44 +20,39 @@ st.markdown("""
             color: #2C2C2C !important;
         }
 
-        .main > div:first-child > div > div > div > div {
-            display: flex;
-            justify-content: center;
-        }
-
         h1, h2, h3, h4, h5, h6, label, span, p, div, button {
             text-align: right;
             font-weight: 500;
             color: #2C2C2C !important;
         }
 
-        label, .stNumberInput label {
-            font-size: 16px;
-            font-weight: 500;
-            color: #2C2C2C !important;
-        }
-
         .stTextInput > div > div > input,
-        .stNumberInput > div > div > input {
-            text-align: right;
-            font-size: 15px;
+        .stNumberInput > div > div > input,
+        .stSelectbox > div > div,
+        .stRadio > div,
+        .stButton button {
             color: #2C2C2C !important;
-            background-color: white !important;
+            background-color: #ffffff !important;
+            font-size: 15px;
         }
 
         .stNumberInput {
             margin-bottom: 20px;
         }
 
-        /* Force override for iOS Safari dark mode */
+        /* Override iOS dark mode specifically */
         @media (prefers-color-scheme: dark) {
-            html, body, .stApp, [class*="css"] {
+            html, body, .stApp, input, select, textarea, button, .stSelectbox div, .stButton button {
                 background-color: #F9F7F1 !important;
                 color: #2C2C2C !important;
             }
 
-            h1, h2, h3, h4, h5, h6, label, span, p, div, button, input, select, textarea {
+            h1, h2, h3, h4, h5, h6, p, span, label, div {
                 color: #2C2C2C !important;
+            }
+
+            .stSelectbox div::before {
+                background-color: #ffffff !important;
             }
 
             input, textarea, select {
