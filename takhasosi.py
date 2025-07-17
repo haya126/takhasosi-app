@@ -4,60 +4,45 @@ import streamlit as st
 from collections import OrderedDict
 
 st.set_page_config(page_title="منصه تخصصي", layout="centered")
-st.markdown("""
-    <style>
+<style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
 
-        body, .stApp {
+        body {
             direction: rtl;
             text-align: right;
-            background-color: #F9F7F1 !important;
-            color: #2C2C2C !important;
+            background-color: #F9F7F1;
         }
 
         * {
             font-family: 'Tajawal', sans-serif !important;
-            color: #2C2C2C !important;
         }
 
-        h1, h2, h3, h4, h5, h6, label, span, p, div, button {
-            text-align: right;
+        .main > div:first-child > div > div > div > div {
+            display: flex;
+            justify-content: center;
+        }
+
+        h1, h2 {
+            text-align: center !important;
+            font-weight: 700;
+            color: #2C2C2C;
+            text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label, .stNumberInput label {
+            font-size: 16px;
             font-weight: 500;
-            color: #2C2C2C !important;
+            color: #444;
         }
 
         .stTextInput > div > div > input,
-        .stNumberInput > div > div > input,
-        .stSelectbox > div > div,
-        .stRadio > div,
-        .stButton button {
-            color: #2C2C2C !important;
-            background-color: #ffffff !important;
+        .stNumberInput > div > div > input {
+            text-align: right;
             font-size: 15px;
         }
 
         .stNumberInput {
             margin-bottom: 20px;
-        }
-
-        /* Override iOS dark mode specifically */
-        @media (prefers-color-scheme: dark) {
-            html, body, .stApp, input, select, textarea, button, .stSelectbox div, .stButton button {
-                background-color: #F9F7F1 !important;
-                color: #2C2C2C !important;
-            }
-
-            h1, h2, h3, h4, h5, h6, p, span, label, div {
-                color: #2C2C2C !important;
-            }
-
-            .stSelectbox div::before {
-                background-color: #ffffff !important;
-            }
-
-            input, textarea, select {
-                background-color: white !important;
-            }
         }
     </style>
 """, unsafe_allow_html=True)
