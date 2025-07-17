@@ -7,13 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1meCYIgLnzgVGNJHctHHAeaLiG0egpKz9
 """
 
-#!pip install -q streamlit
-!curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -o cloudflared
-!chmod +x cloudflared
-
-# Increase UDP buffer sizes to potentially improve performance and eliminate the warning
-!sysctl -w net.core.rmem_max=2500000
-!sysctl -w net.core.wmem_max=2500000
 
 with open("test.py", "w") as f:
     f.write('''
