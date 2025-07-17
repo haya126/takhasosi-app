@@ -399,8 +399,3 @@ if st.button(" اقترح التخصصات"):
         st.warning("عذرًا، لم نجد تخصصات تتوافق مع درجاتك واهتماماتك. ننصحك بمراجعة البيانات المدخلة أو تجربة مجال آخر.")
 
 ''')
-
-import time
-!streamlit run test.py &> /content/log.txt &
-time.sleep(10)
-!./cloudflared tunnel --url http://localhost:8501
