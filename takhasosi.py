@@ -8,18 +8,16 @@ st.markdown("""
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
 
-        html, body, .stApp, [class*="css"] {
+        body {
+            direction: rtl;
+            text-align: right;
             background-color: #F9F7F1 !important;
             color: #2C2C2C !important;
         }
 
-        body {
-            direction: rtl;
-            text-align: right;
-        }
-
         * {
             font-family: 'Tajawal', sans-serif !important;
+            color: #2C2C2C !important;
         }
 
         .main > div:first-child > div > div > div > div {
@@ -27,17 +25,16 @@ st.markdown("""
             justify-content: center;
         }
 
-        h1, h2 {
-            text-align: center !important;
-            font-weight: 700;
+        h1, h2, h3, h4, h5, h6, label, span, p, div, button {
+            text-align: right;
+            font-weight: 500;
             color: #2C2C2C !important;
-            text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
         }
 
         label, .stNumberInput label {
             font-size: 16px;
             font-weight: 500;
-            color: #444 !important;
+            color: #2C2C2C !important;
         }
 
         .stTextInput > div > div > input,
@@ -51,13 +48,24 @@ st.markdown("""
         .stNumberInput {
             margin-bottom: 20px;
         }
+
+        /* Force override for iOS Safari dark mode */
+        @media (prefers-color-scheme: dark) {
+            html, body, .stApp, [class*="css"] {
+                background-color: #F9F7F1 !important;
+                color: #2C2C2C !important;
+            }
+
+            h1, h2, h3, h4, h5, h6, label, span, p, div, button, input, select, textarea {
+                color: #2C2C2C !important;
+            }
+
+            input, textarea, select {
+                background-color: white !important;
+            }
+        }
     </style>
 """, unsafe_allow_html=True)
-
-
-
-
-
 
 st.markdown("""
 <h1 style='text-align: right;'> ابحث عن التخصص المناسب لك في جامعة الكويت؟</h1>
