@@ -8,10 +8,14 @@ st.markdown("""
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
 
+        html, body, .stApp, [class*="css"] {
+            background-color: #F9F7F1 !important;
+            color: #2C2C2C !important;
+        }
+
         body {
             direction: rtl;
             text-align: right;
-            background-color: #F9F7F1;
         }
 
         * {
@@ -26,20 +30,22 @@ st.markdown("""
         h1, h2 {
             text-align: center !important;
             font-weight: 700;
-            color: #2C2C2C;
+            color: #2C2C2C !important;
             text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
         }
 
         label, .stNumberInput label {
             font-size: 16px;
             font-weight: 500;
-            color: #444;
+            color: #444 !important;
         }
 
         .stTextInput > div > div > input,
         .stNumberInput > div > div > input {
             text-align: right;
             font-size: 15px;
+            color: #2C2C2C !important;
+            background-color: white !important;
         }
 
         .stNumberInput {
@@ -47,6 +53,7 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
+
 
 
 
