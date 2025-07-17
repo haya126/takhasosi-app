@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1meCYIgLnzgVGNJHctHHAeaLiG0egpKz9
 """
 
-!pip install -q streamlit
+#!pip install -q streamlit
 !curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -o cloudflared
 !chmod +x cloudflared
 
