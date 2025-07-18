@@ -1,23 +1,21 @@
 # -*- coding: utf-8 -*-
-
 import streamlit.components.v1 as components
 import streamlit as st
 from collections import OrderedDict
 
 components.html(
-    """
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H80R2TH37P"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-H80R2TH37P');
-    </script>
-    """,
-    height=0
+    """
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H80R2TH37P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H80R2TH37P');
+    </script>
+    """,
+    height=0
 )
-
 
 st.set_page_config(page_title="منصه تخصصي", layout="centered")
 st.markdown("""
