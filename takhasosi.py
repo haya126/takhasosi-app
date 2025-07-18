@@ -12,9 +12,9 @@ components.html("""
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'G-H80R2TH37P');
 </script>
-""", height=0)
 
 st.set_page_config(page_title="منصه تخصصي", layout="centered")
 st.markdown("""
