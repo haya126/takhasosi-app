@@ -319,13 +319,7 @@ colleges = OrderedDict({
     }
 
 })
-st.subheader("اختر المسار الثانوي", anchor=None)
-
-stream = st.radio(
-    label="",
-    options=[" علمي", " أدبي"],
-    horizontal=True,
-)
+stream = st.selectbox("🔹 اختر مسارك الثانوي:", [" علمي", " أدبي"])
 
 
 if st.button(" اقترح التخصصات"):
