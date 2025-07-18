@@ -319,8 +319,14 @@ colleges = OrderedDict({
     }
 
 })
-st.subheader("اختر المسار الثانوي")
-stream = st.radio("هل أنت من المسار العلمي أم الأدبي؟", ["علمي", "أدبي"])
+st.subheader("اختر المسار الثانوي", anchor=None)
+
+stream = st.radio(
+    label="",
+    options=[" علمي", " أدبي"],
+    horizontal=True,
+)
+
 
 if st.button(" اقترح التخصصات"):
     matched = []
