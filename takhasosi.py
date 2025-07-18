@@ -40,7 +40,7 @@ st.markdown("""
             text-align: center !important;
             font-weight: 700;
             color: #2C2C2C;
-            text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+            text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);  /* ✅ Fix is here */
         }
 
         label, .stNumberInput label {
@@ -60,6 +60,7 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
+
 
 
 st.markdown("""
