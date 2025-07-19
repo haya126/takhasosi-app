@@ -1,17 +1,12 @@
 # -*- coding: utf-8 -*-
-import streamlit.components.v1 as components
 import streamlit as st
 from collections import OrderedDict
+import streamlit.components.v1 as components
 
+# Plausible Analytics Script
 components.html(
     """
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H80R2TH37P"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-H80R2TH37P');
-    </script>
+    <script defer data-domain="takhasosi-app.streamlit.app" src="https://plausible.io/js/script.js"></script>
     """,
     height=0
 )
