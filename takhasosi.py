@@ -1,8 +1,16 @@
 # -*- coding: utf-8 -*-
-import streamlit as st
 from collections import OrderedDict
+import streamlit as st
+import streamlit.components.v1 as components
 
-<script defer data-domain="takhasosi-app.streamlit.app" src="https://plausible.io/js/script.js"></script>
+# Add Plausible Analytics
+components.html(
+    """
+    <script defer data-domain="takhasosi-app.streamlit.app" src="https://plausible.io/js/script.js"></script>
+    """,
+    height=0
+)
+
 
 
 st.set_page_config(page_title="منصه تخصصي", layout="centered")
