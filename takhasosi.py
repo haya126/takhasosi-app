@@ -3,16 +3,19 @@ from collections import OrderedDict
 import streamlit as st
 import streamlit.components.v1 as components
 
-# Add Plausible Analytics
 components.html(
     """
-    <script defer data-domain="takhasosi-app.streamlit.app" src="https://plausible.io/js/script.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5ZFLRW166"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C5ZFLRW166');
+</script>
     """,
     height=0
 )
-
-
-
 st.set_page_config(page_title="منصه تخصصي", layout="centered")
 st.markdown("""
     <style>
