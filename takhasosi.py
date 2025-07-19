@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from collections import OrderedDict
 import streamlit as st
-import streamlit.components.v1 as components
+
 
 st.set_page_config(page_title="منصه تخصصي", layout="centered")
 st.markdown("""
@@ -49,19 +49,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-components.html(
-    """
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5ZFLRW166"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-C5ZFLRW166');
-</script>
-    """,
-    height=0
-)
 
 
 st.markdown("""
