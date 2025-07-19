@@ -5,18 +5,17 @@ from collections import OrderedDict
 
 components.html(
     """
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H80R2TH37P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-H80R2TH37P');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H80R2TH37P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H80R2TH37P');
+    </script>
     """,
     height=0
 )
+
 
 st.set_page_config(page_title="منصه تخصصي", layout="centered")
 st.markdown("""
