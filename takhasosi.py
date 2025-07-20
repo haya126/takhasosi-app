@@ -322,32 +322,40 @@ colleges = OrderedDict({
 st.subheader("اختر المسار الثانوي")
 stream = st.radio("هل أنت من المسار العلمي أم الأدبي؟", ["علمي", "أدبي"])
 
-
-
 if st.button(" اقترح التخصصات"):
     matched = []
-    for name, data in colleges.items():
 
+    for name, data in colleges.items():
+        # Skip colleges that don’t match the selected stream
         if "stream" in data and data["stream"] != stream:
             continue
 
+        # Skip colleges outside the selected interest
         if interest not in data["interests"]:
             continue
 
         weights = data["weights"]
 
+        # Handle colleges with multiple weight schemes (علمي / أدبي)
         if isinstance(weights, dict) and stream in weights:
             selected_weights = weights[stream]
         elif isinstance(weights, dict) and "gpa" in weights:
             selected_weights = weights
         else:
-            continue  # Skip colleges with no matching weights
+            continue
+
+        # Calculate the weighted composite score
         score = 0
-        if "gpa" in selected_weights: score += gpa * (selected_weights["gpa"] / 100)
-        if "math" in selected_weights: score += math * (selected_weights["math"] / 100)
-        if "english" in selected_weights: score += english * (selected_weights["english"] / 100)
-        if "arabic" in selected_weights: score += arabic * (selected_weights["arabic"] / 100)
-        if "french" in selected_weights: score += french * (selected_weights["french"] / 100)
+        if "gpa" in selected_weights:
+            score += gpa * (selected_weights["gpa"] / 100)
+        if "math" in selected_weights:
+            score += math * (selected_weights["math"] / 100)
+        if "english" in selected_weights:
+            score += english * (selected_weights["english"] / 100)
+        if "arabic" in selected_weights:
+            score += arabic * (selected_weights["arabic"] / 100)
+        if "french" in selected_weights:
+            score += french * (selected_weights["french"] / 100)
 
         final_score = round(score, 2)
 
@@ -383,5 +391,13 @@ if st.button(" اقترح التخصصات"):
                 {paths_html}
             </div>
             """, unsafe_allow_html=True)
+
+        # 📌 Add official source note below the results
+        st.markdown("""
+        <div style='text-align:center; font-size:13px; color:#666; margin-top:30px;'>
+            📌 <em>المعلومات مبنية على بيانات رسمية من جامعة الكويت للسنة الدراسية 2024–2025. قد تتغير المعدلات الدنيا في السنوات القادمة.</em>
+        </div>
+        """, unsafe_allow_html=True)
+
     else:
         st.warning("عذرًا، لم نجد تخصصات تتوافق مع درجاتك واهتماماتك. ننصحك بمراجعة البيانات المدخلة أو تجربة مجال آخر.")
