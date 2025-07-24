@@ -56,11 +56,12 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.subheader("أدخل درجاتك")
-gpa = st.number_input(" معدل الثانوية العامة ٪", 0, 100)
-math = st.number_input(" درجة القدرات – رياضيات ٪", 0, 100)
-english = st.number_input(" درجة القدرات – إنجليزي ٪", 0, 100)
-arabic = st.number_input(" درجة القدرات – عربي ٪  (إذا كانت مطلوبة)", 0, 100)
-french = st.number_input(" درجة القدرات – فرنسي ٪ (إذا كانت مطلوبة)", 0, 100)
+gpa = st.number_input(" معدل الثانوية العامة ٪", min_value=0.0, max_value=100.0, step=0.01)
+math = st.number_input(" درجة القدرات – رياضيات ٪", min_value=0.0, max_value=100.0, step=0.01)
+english = st.number_input(" درجة القدرات – إنجليزي ٪", min_value=0.0, max_value=100.0, step=0.01)
+arabic = st.number_input(" درجة القدرات – عربي ٪  (إذا كانت مطلوبة)", min_value=0.0, max_value=100.0, step=0.01)
+french = st.number_input(" درجة القدرات – فرنسي ٪ (إذا كانت مطلوبة)", min_value=0.0, max_value=100.0, step=0.01)
+
 
 
 
