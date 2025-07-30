@@ -39,10 +39,6 @@ st.image("app_icon.jpg", width=120)
 
 
 
-
-
-
-
 st.set_page_config(page_title="منصه تخصصي", layout="centered")
 st.markdown("""
     <style>
