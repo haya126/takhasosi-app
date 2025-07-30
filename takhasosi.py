@@ -15,8 +15,13 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 st.set_page_config(
     page_title="منصة تخصصي",
-    page_icon="IMG_4692.png"  # Path to your logo file
+    page_icon="app_icon.jpg"  # Path to your logo file
 )
+<link rel="icon" href="app_icon.jpg">
+<link rel="apple-touch-icon" href="IMG_4692.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="منصة تخصصي">
 
 
 # Hide default Streamlit menu & footer
