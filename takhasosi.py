@@ -20,12 +20,15 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ------------------ HIDE DEFAULT STREAMLIT MENU ------------------
+# Hide Streamlit default menu, footer, and header
 st.markdown("""
     <style>
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
     </style>
-""", unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
+
 
 
 st.set_page_config(page_title="منصه تخصصي", layout="centered")
