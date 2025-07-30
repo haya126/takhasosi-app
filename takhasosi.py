@@ -2,8 +2,14 @@
 from collections import OrderedDict
 import streamlit as st
 
+# Set page config with your app icon
+st.set_page_config(
+    page_title="منصة تخصصي - جامعة الكويت",
+    page_icon="app_icon.jpg",
+    layout="wide"
+)
 
-# Hide the "Made with Streamlit" footer
+# Hide default Streamlit menu & footer
 hide_streamlit_style = """
     <style>
     #MainMenu {visibility: hidden;}
@@ -12,6 +18,10 @@ hide_streamlit_style = """
     </style>
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+# Optional: Display your app logo at the top
+st.image("app_icon.jpg", width=120)
+
 
 
 
