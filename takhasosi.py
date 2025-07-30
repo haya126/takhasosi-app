@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from collections import OrderedDict
 import streamlit as st
-import streamlit as st
 
 # Hide Streamlit default menu and header
 hide_streamlit_style = """
@@ -18,7 +17,7 @@ st.set_page_config(
     page_icon="app_icon.jpg"  # Path to your logo file
 )
 <link rel="icon" href="app_icon.jpg">
-<link rel="apple-touch-icon" href="IMG_4692.png">
+<link rel="apple-touch-icon" href="app_icon.jpg">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="منصة تخصصي">
