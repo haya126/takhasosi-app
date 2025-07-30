@@ -2,10 +2,21 @@
 from collections import OrderedDict
 import streamlit as st
 
+# Set favicon for browser tab
 st.set_page_config(
     page_title="منصة تخصصي - جامعة الكويت",
-    page_icon="app_icon.jpg",
+    page_icon="IMG_4692.png",
     layout="wide"
+)
+
+# Inject meta tags for iOS Home Screen icon
+st.markdown(
+    """
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG_4692.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="IMG_4692.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="IMG_4692.png">
+    """,
+    unsafe_allow_html=True
 )
 
 
