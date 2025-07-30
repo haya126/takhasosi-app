@@ -2,39 +2,43 @@
 from collections import OrderedDict
 import streamlit as st
 
-# Hide Streamlit default menu and header
-hide_streamlit_style = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    header {visibility: hidden;}
-    footer {visibility: hidden;}
-    </style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
+# Set page title and favicon
 st.set_page_config(
     page_title="منصة تخصصي",
-    page_icon="app_icon.jpg"  # Path to your logo file
+    page_icon="app_icon.jpg",  # Your icon file in the same folder
+    layout="centered"
 )
-<link rel="icon" href="app_icon.jpg">
-<link rel="apple-touch-icon" href="app_icon.jpg">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="منصة تخصصي">
 
+# Inject Apple touch icon and mobile web app settings
+st.markdown(
+    """
+    <head>
+    <link rel="apple-touch-icon" href="app_icon.jpg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="منصة تخصصي">
+    </head>
+    """,
+    unsafe_allow_html=True
+)
 
-# Hide default Streamlit menu & footer
-hide_streamlit_style = """
+# Hide Streamlit default menu and header/footer
+st.markdown(
+    """
     <style>
     #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
     header {visibility: hidden;}
+    footer {visibility: hidden;}
     </style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+    """,
+    unsafe_allow_html=True
+)
 
-# Optional: Display your app logo at the top
+# Optional: Add your logo in the page
 st.image("app_icon.jpg", width=120)
+
+
+
 
 
 
