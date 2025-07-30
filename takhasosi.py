@@ -2,41 +2,32 @@
 from collections import OrderedDict
 import streamlit as st
 
-# Set page title and favicon
 st.set_page_config(
     page_title="منصة تخصصي",
-    page_icon="app_icon.jpg",  # Your icon file in the same folder
+    page_icon="app_icon.jpg",
     layout="centered"
 )
 
-# Inject Apple touch icon and mobile web app settings
-st.markdown(
-    """
-    <head>
+# Inject custom HTML for Apple Touch Icon & meta tags
+st.markdown("""
+    <link rel="icon" href="app_icon.jpg">
     <link rel="apple-touch-icon" href="app_icon.jpg">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="منصة تخصصي">
-    </head>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
-# Hide Streamlit default menu and header/footer
-st.markdown(
-    """
+# Hide Streamlit default menu & footer
+st.markdown("""
     <style>
     #MainMenu {visibility: hidden;}
     header {visibility: hidden;}
     footer {visibility: hidden;}
     </style>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
-# Optional: Add your logo in the page
+# Optional: Display logo inside the app
 st.image("app_icon.jpg", width=120)
-
 
 
 st.set_page_config(page_title="منصه تخصصي", layout="centered")
