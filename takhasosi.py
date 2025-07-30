@@ -2,12 +2,13 @@
 from collections import OrderedDict
 import streamlit as st
 
-# Set page config with your app icon
+# Set favicon and page title for browser & dock
 st.set_page_config(
     page_title="منصة تخصصي - جامعة الكويت",
-    page_icon="app_icon.jpg",
+    page_icon="app_icon.jpg",  # Path to your icon file
     layout="wide"
 )
+
 
 # Hide default Streamlit menu & footer
 hide_streamlit_style = """
