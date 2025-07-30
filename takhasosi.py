@@ -3,6 +3,18 @@ from collections import OrderedDict
 import streamlit as st
 
 
+# Hide the "Made with Streamlit" footer
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+
+
 st.set_page_config(page_title="منصه تخصصي", layout="centered")
 st.markdown("""
     <style>
