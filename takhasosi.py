@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-
 from collections import OrderedDict
 import streamlit as st
+import pandas as pd
 
+# ------------------ PAGE CONFIG ------------------
 st.set_page_config(
     page_title="منصة تخصصي",
     page_icon="app_icon.jpg",
     layout="centered"
 )
 
-# Inject custom HTML for Apple Touch Icon & meta tags
+# ------------------ APPLE TOUCH ICON + META TAGS ------------------
 st.markdown("""
     <link rel="icon" href="app_icon.jpg">
     <link rel="apple-touch-icon" href="app_icon.jpg">
@@ -17,17 +19,13 @@ st.markdown("""
     <meta name="apple-mobile-web-app-title" content="منصة تخصصي">
 """, unsafe_allow_html=True)
 
-# Hide Streamlit default menu & footer
+# ------------------ HIDE DEFAULT STREAMLIT MENU ------------------
 st.markdown("""
     <style>
-    #MainMenu {visibility: hidden;}
-    header {visibility: hidden;}
-    footer {visibility: hidden;}
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
     </style>
 """, unsafe_allow_html=True)
-
-# Optional: Display logo inside the app
-st.image("app_icon.jpg", width=120)
 
 
 st.set_page_config(page_title="منصه تخصصي", layout="centered")
