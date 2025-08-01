@@ -3,6 +3,21 @@ from collections import OrderedDict
 import streamlit as st
 import pandas as pd
 
+
+# Set custom page configuration
+st.set_page_config(
+    page_title="Takhasosi",
+    page_icon="app_icon-2.jpg",  # Replace with your icon file name
+    layout="wide"
+)
+
+# Inject HTML to set iOS PWA icon
+st.markdown(
+    """
+    <link rel="apple-touch-icon" sizes="180x180" href="app_icon-2.jpg">
+    """,
+    unsafe_allow_html=True
+)
 # ------------------ PAGE CONFIG ------------------
 st.set_page_config(
     page_title="منصة تخصصي",
