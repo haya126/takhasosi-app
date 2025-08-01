@@ -1,38 +1,7 @@
 # -*- coding: utf-8 -*-
 from collections import OrderedDict
 import streamlit as st
-import pandas as pd
 
-
-# Set custom page configuration
-st.set_page_config(
-    page_title="Takhasosi",
-    page_icon="app_icon-2.jpg",  # Replace with your icon file name
-    layout="wide"
-)
-
-# Inject HTML to set iOS PWA icon
-st.markdown(
-    """
-    <link rel="apple-touch-icon" sizes="180x180" href="app_icon-2.jpg">
-    """,
-    unsafe_allow_html=True
-)
-# ------------------ PAGE CONFIG ------------------
-st.set_page_config(
-    page_title="منصة تخصصي",
-    page_icon="app_icon.jpg",
-    layout="centered"
-)
-
-# ------------------ APPLE TOUCH ICON + META TAGS ------------------
-st.markdown("""
-    <link rel="icon" href="app_icon.jpg">
-    <link rel="apple-touch-icon" href="app_icon.jpg">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="منصة تخصصي">
-""", unsafe_allow_html=True)
 
 # ------------------ HIDE DEFAULT STREAMLIT MENU ------------------
 # Hide Streamlit default menu, footer, and header
